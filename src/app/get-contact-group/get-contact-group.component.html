@@ -1,0 +1,33 @@
+<body>
+  <div class="container mt-5">
+    <h2>Contact Groups</h2>
+
+    <div class="mb-3">
+      <label for="groupName" class="form-label">Group Name:</label>
+      <input type="text" class="form-control" id="groupName" [(ngModel)]="newGroup.groupName" required>
+    </div>
+
+    <button class="btn btn-primary" [disabled]="!newGroup.groupName" (click)="OnCreateButtonClick()">Create</button>
+
+    <table class="table table-striped mt-5">
+      <thead>
+      <tr>
+        <th>ID</th>
+        <th>Group Name</th>
+        <th>Actions</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contactGroup of contactGroups">
+        <td>{{ contactGroup.groupId }}</td>
+        <td>{{ contactGroup.groupName }}</td>
+        <td>
+          <button class="btn btn-primary me-2">Add Contacts</button>
+          <button class="btn btn-warning me-2">Delete Contacts</button>
+          <button class="btn btn-danger">Delete Group</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</body>

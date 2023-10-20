@@ -1,0 +1,36 @@
+<!-- src/app/contact-list/contact-list.component.html -->
+<body>
+  <div class="container mt-5" >
+    <h2>Contacts</h2>
+
+    <div class="d-flex justify-content-between mb-3">
+      <button class="btn btn-primary" (click)="OnCreateButtonClick()">Create</button>
+      <button class="btn btn-success" (click)="OnGetContactGroup()">Group</button>
+    </div>
+
+    <table class="table table-striped">
+      <thead>
+      <tr>
+        <th>#</th>
+        <th>First Name</th>
+        <th>Last Name</th>
+        <th>Email</th>
+        <th>Action</th>
+      </tr>
+      </thead>
+      <tbody>
+      <tr *ngFor="let contact of contacts">
+        <td>{{ contact.id }}</td>
+        <td>{{ contact.firstName }}</td>
+        <td>{{ contact.lastName }}</td>
+        <td>{{ contact.email }}</td>
+
+        <td>
+          <button class="btn btn-warning me-2" (click)="OnModifyButtonClick(contact.id)">Modify</button>
+          <button class="btn btn-danger" (click)="OnDeleteButtonClick(contact.id)">Delete</button>
+        </td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
