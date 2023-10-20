@@ -24,7 +24,7 @@
         <td>
           <button class="btn btn-primary me-2">Add Contacts</button>
           <button class="btn btn-warning me-2">Delete Contacts</button>
-          <button class="btn btn-danger">Delete Group</button>
+          <button class="btn btn-danger" (click)="OnDeleteButtonClick(contactGroup.groupId)">Delete Group</button>
         </td>
       </tr>
       </tbody>

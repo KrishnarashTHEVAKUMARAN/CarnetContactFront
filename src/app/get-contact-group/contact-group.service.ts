@@ -19,4 +19,9 @@ export class ContactGroupService {
     const url = `${this.apiUrl}/contactsGroups`;
     return this.http.get<any[]>(url);
   }
+
+  deleteContactGroup(id: number): Observable<void> {
+    const url = `${this.apiUrl}/deleteContactGroup/${id}`;
+    return this.http.delete<void>(url);
+  }
 }

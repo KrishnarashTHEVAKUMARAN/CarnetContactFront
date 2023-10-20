@@ -36,5 +36,12 @@ export class GetContactGroupComponent {
     );
   }
 
+  OnDeleteButtonClick(contactId: number): void {
+    this.contactGroupService.deleteContactGroup(contactId).subscribe(() => {
+      console.log('Contact supprimé avec succès, le contact n°',contactId);
+      this.fetchGroups();  // recharger la liste après la suppression
+    });
+  }
+
 
 }
