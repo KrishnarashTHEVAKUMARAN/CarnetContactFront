@@ -9,6 +9,8 @@ import { GetContactsComponent } from './get-contacts/get-contacts.component';
 import { AddContactsComponent } from './add-contacts/add-contacts.component';
 import { ModifyContactsComponent } from './modify-contacts/modify-contacts.component';
 import { GetContactGroupComponent } from './get-contact-group/get-contact-group.component';
+import { AddContactsInContactGroupComponent } from './add-contacts-in-contact-group/add-contacts-in-contact-group.component';
+import { DeleteContactsInContactGroupComponent } from './delete-contacts-in-contact-group/delete-contacts-in-contact-group.component';
 
 @NgModule({
   declarations: [
@@ -18,6 +20,8 @@ import { GetContactGroupComponent } from './get-contact-group/get-contact-group.
     AddContactsComponent,
     ModifyContactsComponent,
     GetContactGroupComponent,
+    AddContactsInContactGroupComponent,
+    DeleteContactsInContactGroupComponent,
   ],
   imports: [
     BrowserModule,

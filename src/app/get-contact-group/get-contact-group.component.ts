@@ -12,7 +12,7 @@ export class GetContactGroupComponent {
   contactGroups: ContactGroup[] = [];
   newGroup: ContactGroup = new ContactGroup();
 
-  constructor(private contactGroupService: ContactGroupService) {}
+  constructor(private contactGroupService: ContactGroupService, private router : Router) {}
 
   ngOnInit(): void {
     this.fetchGroups();
@@ -34,6 +34,14 @@ export class GetContactGroupComponent {
         console.error('Erreur lors de l\'ajout du contact', error);
       }
     );
+  }
+
+  OnAddContactButtonClick(contactId: number) : void{
+    this.router.navigate(['/AddContactsInContactGroup',contactId])
+  }
+
+  OnDeleteContactButtonClick(contactId: number) : void{
+    this.router.navigate(['/DeleteContactsInContactGroup',contactId])
   }
 
   OnDeleteButtonClick(contactId: number): void {
