@@ -1,1 +1,29 @@
-<p>add-contacts-in-contact-group works!</p>
+<body>
+<div class="container mt-5" >
+  <h2>Add Contacts in {{contactGroup.groupName}}</h2>
+
+  <table class="table table-striped">
+    <thead>
+    <tr>
+      <th>#</th>
+      <th>First Name</th>
+      <th>Last Name</th>
+      <th>Email</th>
+      <th>Action</th>
+    </tr>
+    </thead>
+    <tbody>
+    <tr *ngFor="let contact of contacts">
+      <td>{{ contact.id }}</td>
+      <td>{{ contact.firstName }}</td>
+      <td>{{ contact.lastName }}</td>
+      <td>{{ contact.email }}</td>
+
+      <td>
+        <button class="btn btn-success me-2" (click)="OnAddButtonClick(contactGroup.groupId,contact.id)">Add</button>
+      </td>
+    </tr>
+    </tbody>
+  </table>
+</div>
+</body>
