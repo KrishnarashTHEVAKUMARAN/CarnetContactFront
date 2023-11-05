@@ -38,6 +38,7 @@ export class GetContactsComponent implements OnInit{
   OnDeleteButtonClick(contactId: number): void {
     this.contactService.deleteContact(contactId).subscribe(() => {
       console.log('Contact supprimé avec succès, le contact n°',contactId);
+      alert('Contact supprimé avec succès');
       this.loadContacts();  // recharger la liste après la suppression
     });
   }
