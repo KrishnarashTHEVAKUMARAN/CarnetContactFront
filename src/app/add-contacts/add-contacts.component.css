@@ -2,7 +2,7 @@ body {
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: #3498db;
+  background: linear-gradient(90deg, #8360c3, #2ebf91);
 }
 
 .btn-login {
