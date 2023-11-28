@@ -11,6 +11,7 @@ import { ModifyContactsComponent } from './modify-contacts/modify-contacts.compo
 import { GetContactGroupComponent } from './get-contact-group/get-contact-group.component';
 import { AddContactsInContactGroupComponent } from './add-contacts-in-contact-group/add-contacts-in-contact-group.component';
 import { DeleteContactsInContactGroupComponent } from './delete-contacts-in-contact-group/delete-contacts-in-contact-group.component';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +23,7 @@ import { DeleteContactsInContactGroupComponent } from './delete-contacts-in-cont
     GetContactGroupComponent,
     AddContactsInContactGroupComponent,
     DeleteContactsInContactGroupComponent,
+    NavbarComponent,
   ],
   imports: [
     BrowserModule,
