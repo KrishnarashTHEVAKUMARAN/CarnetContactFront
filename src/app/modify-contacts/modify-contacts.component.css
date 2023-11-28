@@ -3,6 +3,7 @@ body {
   justify-content: center;
   align-items: center;
   background: linear-gradient(90deg, #8360c3, #2ebf91);
+  padding-top: 50px;
 }
 
 .btn-login {
