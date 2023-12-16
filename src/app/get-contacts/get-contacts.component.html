@@ -1,12 +1,15 @@
 <!-- src/app/contact-list/contact-list.component.html -->
 <body>
 <app-navbar></app-navbar>
-  <div class="container mt-5" >
-    <h2>Contacts</h2>
-
-    <div class="d-flex justify-content-between mb-3">
-      <button class="btn btn-primary" (click)="OnCreateButtonClick()">Create</button>
-      <button class="btn btn-success" (click)="OnGetContactGroup()">Group</button>
+  <div class="container mt-5">
+    <div class="row mb-3 align-items-center">
+      <div class="col d-flex align-items-center">
+        <h2 class="me-3 mb-0">Contacts</h2>
+        <button class="btn btn-primary icon" (click)="OnCreateButtonClick()">Add</button>
+      </div>
+      <div class="col d-flex justify-content-end">
+        <button class="btn btn-success icon" (click)="OnGetContactGroup()">Group</button>
+      </div>
     </div>
 
     <table class="table table-striped">
@@ -27,8 +30,8 @@
         <td>{{ contact.email }}</td>
 
         <td>
-          <button class="btn btn-warning me-2" (click)="OnModifyButtonClick(contact.id)">Modify</button>
-          <button class="btn btn-danger" (click)="OnDeleteButtonClick(contact.id)">Delete</button>
+          <button class="btn btn-warning me-2 icon" (click)="OnModifyButtonClick(contact.id)">edit</button>
+          <button class="btn btn-danger me-2 icon" (click)="OnDeleteButtonClick(contact.id)">delete</button>
         </td>
       </tr>
       </tbody>
