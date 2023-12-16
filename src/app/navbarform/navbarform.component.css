@@ -1,0 +1,14 @@
+.navbar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 1000;
+  background: white;
+}
+
+@media (max-width: 992px) {
+  .navbar-collapse {
+    background-color: white; /* Fond blanc pour la navbar en mode collapsed */
+  }
+}
