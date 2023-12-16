@@ -12,6 +12,7 @@ import { GetContactGroupComponent } from './get-contact-group/get-contact-group.
 import { AddContactsInContactGroupComponent } from './add-contacts-in-contact-group/add-contacts-in-contact-group.component';
 import { DeleteContactsInContactGroupComponent } from './delete-contacts-in-contact-group/delete-contacts-in-contact-group.component';
 import { NavbarComponent } from './navbar/navbar.component';
+import { NavbarformComponent } from './navbarform/navbarform.component';
 
 @NgModule({
   declarations: [
@@ -24,6 +25,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     AddContactsInContactGroupComponent,
     DeleteContactsInContactGroupComponent,
     NavbarComponent,
+    NavbarformComponent,
   ],
   imports: [
     BrowserModule,
