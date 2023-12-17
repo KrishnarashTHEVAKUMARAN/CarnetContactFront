@@ -2,8 +2,8 @@
 <app-navbar></app-navbar>
   <div class="container mt-5">
     <div class="col d-flex align-items-center mb-3">
-      <h2 class="me-3">Contact Groups</h2>
-      <button class="btn btn-primary icon" [disabled]="!newGroup.groupName" (click)="OnCreateButtonClick()">Add Group</button>
+      <h3 class="me-3">Contact Groups</h3>
+      <button class="btn btn-primary icon" [disabled]="!newGroup.groupName" (click)="OnCreateButtonClick()">GroupAdd</button>
     </div>
 
     <div class="mb-3">
@@ -11,7 +11,7 @@
       <input type="text" class="form-control" id="groupName" [(ngModel)]="newGroup.groupName" required>
     </div>
 
-    <table class="table table-striped mt-5">
+    <table class="table table-striped">
       <thead>
       <tr>
         <th>ID</th>
@@ -24,9 +24,9 @@
         <td>{{ contactGroup.groupId }}</td>
         <td>{{ contactGroup.groupName }}</td>
         <td>
-          <button class="btn btn-primary me-2 icon" (click)="OnAddContactButtonClick(contactGroup.groupId)">Add Contacts</button>
-          <button class="btn btn-warning me-2 icon" (click)="OnDeleteContactButtonClick(contactGroup.groupId)">Delete Contacts</button>
-          <button class="btn btn-danger icon" (click)="OnDeleteButtonClick(contactGroup.groupId)">Delete Group</button>
+          <button class="btn btn-primary me-2 icon" (click)="OnAddContactButtonClick(contactGroup.groupId)">ContactsAdd</button>
+          <button class="btn btn-warning me-2 icon" (click)="OnDeleteContactButtonClick(contactGroup.groupId)">ContactsDelete</button>
+          <button class="btn btn-danger icon" (click)="OnDeleteButtonClick(contactGroup.groupId)">GroupDelete</button>
         </td>
       </tr>
       </tbody>
