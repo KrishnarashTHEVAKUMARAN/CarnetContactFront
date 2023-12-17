@@ -10,7 +10,6 @@ body {
   font-size: 0.9rem;
   letter-spacing: 0.05rem;
   padding: 0.75rem 1rem;
-  background: #FFD700;
 }
 
 .contact-title {
@@ -23,7 +22,7 @@ body {
   margin: 0 auto;
   width: 170px;
   height: 3px;
-  background-color: #FFD700;
+  background-color: #90EE90;
   position: absolute;
   left: 50%;
   transform: translateX(-50%);

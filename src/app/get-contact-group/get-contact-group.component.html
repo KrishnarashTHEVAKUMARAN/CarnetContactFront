@@ -3,7 +3,7 @@
   <div class="container mt-5">
     <div class="col d-flex align-items-center mb-3">
       <h3 class="me-3">Contact Groups</h3>
-      <button class="btn btn-primary icon" [disabled]="!newGroup.groupName" (click)="OnCreateButtonClick()">GroupAdd</button>
+      <button class="btn btn-success icon" [disabled]="!newGroup.groupName" (click)="OnCreateButtonClick()">GroupAdd</button>
     </div>
 
     <div class="mb-3">
@@ -24,7 +24,7 @@
         <td>{{ contactGroup.groupId }}</td>
         <td>{{ contactGroup.groupName }}</td>
         <td>
-          <button class="btn btn-primary me-2 icon" (click)="OnAddContactButtonClick(contactGroup.groupId)">ContactsAdd</button>
+          <button class="btn btn-success me-2 icon" (click)="OnAddContactButtonClick(contactGroup.groupId)">ContactsAdd</button>
           <button class="btn btn-warning me-2 icon" (click)="OnDeleteContactButtonClick(contactGroup.groupId)">ContactsDelete</button>
           <button class="btn btn-danger icon" (click)="OnDeleteButtonClick(contactGroup.groupId)">GroupDelete</button>
         </td>
