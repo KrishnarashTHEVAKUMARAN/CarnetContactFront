@@ -5,60 +5,76 @@
     <div class="col-sm-9 col-md-7 col-lg-5">
       <div class="card border-0 shadow rounded-3 my-5">
         <div class="card-body p-4 p-sm-5">
-          <h4 class="card-title text-center mb-4 contact-title">Create Contact</h4>
+          <h4 class="card-title text-center mb-4 contact-title">Modify Contact</h4>
           <form (ngSubmit)="onSubmit()">
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" [(ngModel)]="newContact.firstName" required>
-              <label for="firstName">First Name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" [(ngModel)]="newContact.lastName" required>
-              <label for="lastName">Last Name</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="newContact.email" required>
-              <label for="email">Email</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="street" name="street" placeholder="Street" [(ngModel)]="newContact.address.street">
-              <label for="street">Street</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip Code" [(ngModel)]="newContact.address.zip">
-              <label for="zip">Zip Code</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="city" name="city" placeholder="City" [(ngModel)]="newContact.address.city">
-              <label for="city">City</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="country" name="country" placeholder="Country" [(ngModel)]="newContact.address.country">
-              <label for="country">Country</label>
-            </div>
-            <div class="form-floating mb-3">
-              <select class="form-control" id="phoneKind1" name="phoneKind1" placeholder="Select Phone Kind" [(ngModel)]="newContact.phones[0].phoneKind">
-                <option value="Portable">Portable</option>
-                <option value="Fixe">Fixe</option>
-              </select>
-              <label for="phoneKind1">Phone Kind 1</label>
-            </div>
-            <div class="form-floating mb-3">
-              <input type="text" class="form-control" id="phoneNumber1" name="phoneNumber1" placeholder="Phone Number 1" [(ngModel)]="newContact.phones[0].phoneNumber">
-              <label for="phoneNumber1">Phone Number 1</label>
-            </div>
-            <div class="form-floating mb-3" *ngIf="newContact.phones && newContact.phones[1]">
-              <select class="form-control" id="phoneKind2" name="phoneKind2" placeholder="Select Phone Kind 2" [(ngModel)]="newContact.phones[1].phoneKind">
-                <option value="Portable">Portable</option>
-                <option value="Fixe">Fixe</option>
-              </select>
-              <label for="phoneKind2">Phone Kind 2</label>
-            </div>
-            <div class="form-floating mb-3" *ngIf="newContact.phones && newContact.phones[1]">
-              <input type="text" class="form-control" id="phoneNumber2" name="phoneNumber2" placeholder="Phone Number 2" [(ngModel)]="newContact.phones[1].phoneNumber">
-              <label for="phoneNumber2">Phone Number 2</label>
-            </div>
+
+            <!-- Personal Information Section -->
+            <fieldset>
+              <legend>Personal Information</legend>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="firstName" name="firstName" placeholder="First Name" [(ngModel)]="newContact.firstName" required>
+                <label for="firstName">First Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="lastName" name="lastName" placeholder="Last Name" [(ngModel)]="newContact.lastName" required>
+                <label for="lastName">Last Name</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="email" class="form-control" id="email" name="email" placeholder="Email" [(ngModel)]="newContact.email" required>
+                <label for="email">Email</label>
+              </div>
+            </fieldset>
+
+            <!-- Address Section -->
+            <fieldset>
+              <legend>Address</legend>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="street" name="street" placeholder="Street" [(ngModel)]="newContact.address.street">
+                <label for="street">Street</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="zip" name="zip" placeholder="Zip Code" [(ngModel)]="newContact.address.zip">
+                <label for="zip">Zip Code</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="city" name="city" placeholder="City" [(ngModel)]="newContact.address.city">
+                <label for="city">City</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="country" name="country" placeholder="Country" [(ngModel)]="newContact.address.country">
+                <label for="country">Country</label>
+              </div>
+            </fieldset>
+
+            <!-- Phone Number Section -->
+            <fieldset>
+              <legend>Phone Number</legend>
+              <div class="form-floating mb-3">
+                <select class="form-control" id="phoneKind1" name="phoneKind1" [(ngModel)]="newContact.phones[0].phoneKind">
+                  <option value="Portable">Portable</option>
+                  <option value="Fixe">Fixe</option>
+                </select>
+                <label for="phoneKind1">Phone Kind 1</label>
+              </div>
+              <div class="form-floating mb-3">
+                <input type="text" class="form-control" id="phoneNumber1" name="phoneNumber1" placeholder="Phone Number 1" [(ngModel)]="newContact.phones[0].phoneNumber">
+                <label for="phoneNumber1">Phone Number 1</label>
+              </div>
+              <div class="form-floating mb-3" *ngIf="newContact.phones && newContact.phones[1]">
+                <select class="form-control" id="phoneKind2" name="phoneKind2" [(ngModel)]="newContact.phones[1].phoneKind">
+                  <option value="Portable">Portable</option>
+                  <option value="Fixe">Fixe</option>
+                </select>
+                <label for="phoneKind2">Phone Kind 2</label>
+              </div>
+              <div class="form-floating mb-3" *ngIf="newContact.phones && newContact.phones[1]">
+                <input type="text" class="form-control" id="phoneNumber2" name="phoneNumber2" placeholder="Phone Number 2" [(ngModel)]="newContact.phones[1].phoneNumber">
+                <label for="phoneNumber2">Phone Number 2</label>
+              </div>
+            </fieldset>
+
             <div class="d-grid">
-              <button class="btn btn-success btn-login text-uppercase text-white" type="submit">Create</button>
+              <button class="btn btn-warning btn-login text-uppercase text-white" type="submit">Modify</button>
             </div>
           </form>
         </div>
@@ -67,4 +83,3 @@
   </div>
 </div>
 </body>
-
