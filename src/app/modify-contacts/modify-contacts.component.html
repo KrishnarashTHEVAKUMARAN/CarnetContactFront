@@ -60,14 +60,14 @@
                 <input type="text" class="form-control" id="phoneNumber1" name="phoneNumber1" placeholder="Phone Number 1" [(ngModel)]="existingContact.phones[0].phoneNumber">
                 <label for="phoneNumber1">Phone Number 1</label>
               </div>
-              <div class="form-floating mb-3" *ngIf="existingContact.phones && existingContact.phones[1]">
+              <div class="form-floating mb-3">
                 <select class="form-control" id="phoneKind2" name="phoneKind2" [(ngModel)]="existingContact.phones[1].phoneKind">
                   <option value="Portable">Portable</option>
                   <option value="Fixe">Fixe</option>
                 </select>
                 <label for="phoneKind2">Phone Kind 2</label>
               </div>
-              <div class="form-floating mb-3" *ngIf="existingContact.phones && existingContact.phones[1]">
+              <div class="form-floating mb-3">
                 <input type="text" class="form-control" id="phoneNumber2" name="phoneNumber2" placeholder="Phone Number 2" [(ngModel)]="existingContact.phones[1].phoneNumber">
                 <label for="phoneNumber2">Phone Number 2</label>
               </div>
